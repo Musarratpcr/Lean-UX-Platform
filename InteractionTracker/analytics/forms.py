@@ -15,6 +15,8 @@ class AppCreationForm(forms.ModelForm):
         model = App
         fields = ('app_name','id')
 
+    # this function save the data sumited by user form
+    # Base on commit values, if commit ture then it save the form.
     def save(self, commit=True):
         app = super(AppCreationForm, self).save(commit=False)
         if commit:
